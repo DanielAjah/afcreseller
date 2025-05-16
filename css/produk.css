@@ -1,0 +1,101 @@
+/* produk.css */
+
+/* Container utama */
+.produk-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Judul section */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003366; /* biru navy */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Grid produk */
+.products-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Kartu produk */
+.product-card {
+  background-color: #f9fbff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Gambar produk */
+.product-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.03);
+}
+
+/* Deskripsi produk */
+.product-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Manfaat produk */
+.product-benefits {
+  list-style: disc;
+  padding-left: 1.2rem;
+  text-align: left;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .product-card {
+    padding: 1.2rem;
+  }
+
+  .product-desc {
+    font-size: 0.95rem;
+  }
+
+  .product-benefits {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .product-image {
+    max-height: 150px;
+  }
+}

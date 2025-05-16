@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testimoni | AFC Reseller</title>
+  <meta name="description" content="Baca testimoni pelanggan resmi AFC Reseller. Kepuasan dan kualitas produk terbaik." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/png" href="../gambar/favicon.png" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    main.container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      color: #003366;
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .testimoni-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .testimoni-item {
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideIn 0.6s ease forwards;
+    }
+    .testimoni-item:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .testimoni-item:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    .testimoni-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .testimoni-author {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="Beranda AFC Reseller">
+        <img src="../gambar/logo.png" alt="Logo AFC Reseller" class="logo-img" />
+      </a>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="testimoni.html" class="active" aria-current="page">Testimoni</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Testimoni Pelanggan</h2>
+    <section class="testimoni-list" aria-label="Daftar testimoni pelanggan">
+      <article class="testimoni-item" tabindex="0">
+        <p>“Produk AFC sangat membantu saya, kualitas terbaik!”</p>
+        <p class="testimoni-author">– Andi</p>
+      </article>
+      <article class="testimoni-item" tabindex="0">
+        <p>“Pelayanan Sipriana Marseli sangat ramah dan cepat.”</p>
+        <p class="testimoni-author">– Sari</p>
+      </article>
+      <article class="testimoni-item" tabindex="0">
+        <p>“Saya puas menjadi reseller AFC, sangat menguntungkan.”</p>
+        <p class="testimoni-author">– Budi</p>
+      </article>
+      <!-- Tambah testimoni lain di sini -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sipriana Marseli | Reseller Resmi AFC</p>
+  </footer>
+
+  <script>
+    function toggleMenu(button) {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+    }
+  </script>
+</body>
+</html>

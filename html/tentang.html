@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tentang | AFC Reseller</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../gambar/favicon.png" type="image/png" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    main.container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1.section-title {
+      color: #003366;
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .about-wrapper {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .about-text p {
+      margin-bottom: 1.2rem;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-contact {
+      display: inline-block;
+      background-color: #ff6f61;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .btn-contact:hover {
+      background-color: #e55549;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .about-wrapper {
+        flex-direction: column;
+      }
+
+      h1.section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f1f1f1;
+      color: #333;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="../gambar/logo.png" alt="AFC Logo" class="logo-img" />
+      </a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="testimoni.html">Testimoni</a></li>
+        <li><a href="tentang.html" class="active">Tentang</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <h1 class="section-title">Tentang Saya & AFC</h1>
+    <div class="about-wrapper">
+      <div class="about-text">
+        <p>Halo, saya <strong>Sipriana Marseli</strong>, reseller resmi <strong>AFC Japan</strong>.</p>
+        <p>AFC adalah perusahaan Jepang ternama yang menghadirkan produk kesehatan dan kecantikan berkualitas tinggi, berbasis sains dan teknologi modern.</p>
+        <p>Dengan menjadi reseller resmi, saya hadir untuk membantu Anda mendapatkan produk asli AFC dengan proses pemesanan yang aman, cepat, dan terpercaya.</p>
+        <p>Saya juga siap membimbing Anda yang ingin memulai bisnis sebagai reseller bersama AFC. Mari sukses bersama!</p>
+        <a href="kontak.html" class="btn-contact">Hubungi Saya</a>
+      </div>
+      <div class="about-image">
+        <img src="../gambar/foto.jpeg" alt="Foto Sipriana Marseli" />
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Sipriana Marseli | Reseller Resmi AFC</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

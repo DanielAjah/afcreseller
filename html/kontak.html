@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak | AFC Reseller</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/png" href="../gambar/favicon.png" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p0Q7+4S7AXnpIxAcn3+6jpBlK0lX9Ix5Pf5s1N9/r8kU6V1F0UYCewUz4yVrT2pxx/6xAG0cU8D3q6NVgHCeVg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <nav>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="../gambar/logo.png" alt="AFC Logo" class="logo-img" />
+      </a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="testimoni.html">Testimoni</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container kontak-container">
+    <h2 class="section-title">Hubungi Saya</h2>
+    <p class="section-subtitle">Jika Anda tertarik atau ingin bertanya lebih lanjut, jangan ragu untuk menghubungi saya melalui:</p>
+
+    <ul class="kontak-list">
+      <li>
+        <i class="fab fa-instagram kontak-icon"></i>
+        Instagram: <a href="https://www.instagram.com/siprianamarseli/" target="_blank" rel="noopener">@siprianamarseli</a>
+      </li>
+      <li>
+        <i class="fab fa-tiktok kontak-icon"></i>
+        TikTok: <a href="https://www.tiktok.com/@sipriana.marseli" target="_blank" rel="noopener">@sipriana.marseli</a>
+      </li>
+      <li>
+        <i class="fab fa-whatsapp kontak-icon"></i>
+        WhatsApp: <a href="http://wa.me/6281578875052" target="_blank" rel="noopener">+62 815-7887-5052</a>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 Sipriana Marseli | Reseller Resmi AFC</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+  
+  </script>
+</body>
+</html>

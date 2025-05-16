@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produk | AFC Reseller</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/produk.css" />
+  <link rel="icon" href="../gambar/favicon.png" type="image/png" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="../gambar/logo.png" alt="AFC Logo" class="logo-img" />
+      </a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html" class="active">Produk</a></li>
+        <li><a href="testimoni.html">Testimoni</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container produk-container fade-in">
+    <h1 class="section-title">Produk Unggulan AFC</h1>
+    <section class="products-grid">
+
+      <article class="product-card fade-in">
+        <img src="../gambar/produk/sop_subarashi.png" loading="lazy" alt="Produk suplemen SOP Subarashi dari AFC" class="product-image" />
+        <h2>SOP Subarashi</h2>
+        <p class="product-desc">
+          Suplemen kesehatan Jepang yang mengandung Salmon Ovary Peptide (SOP), Sardine Peptide, dan Vegan Peptide (Fruit Flow). Mendukung kesehatan jantung dan pembuluh darah serta regenerasi sel.
+        </p>
+        <ul class="product-benefits">
+          <li>Membantu memperbaiki dan meregenerasi sel tubuh.</li>
+          <li>Meningkatkan aliran darah dan oksigen ke seluruh tubuh.</li>
+          <li>Mengurangi risiko hipertensi dan pembekuan darah.</li>
+          <li>Mendukung fungsi jantung yang sehat dan mencegah penyakit kardiovaskular.</li>
+        </ul>
+      </article>
+
+      <article class="product-card fade-in">
+        <img src="../gambar/produk/utsukushhii.png" loading="lazy" alt="Produk Utsukushhii dengan kandungan probiotik" class="product-image" />
+        <h2>Utsukushhii</h2>
+        <p class="product-desc">
+          Produk perawatan kesehatan dengan 1 triliun bakteri baik per sachet, menjaga mikroflora usus, meningkatkan imun, dan memperbaiki tekstur serta kekenyalan kulit.
+        </p>
+        <ul class="product-benefits">
+          <li>Meningkatkan kesehatan pencernaan dan keseimbangan mikroflora usus.</li>
+          <li>Mendukung sistem kekebalan tubuh.</li>
+          <li>Memperbaiki tekstur kulit dan mengurangi kerutan.</li>
+          <li>Memiliki efek anti-tumor dan anti-peradangan.</li>
+        </ul>
+      </article>
+
+      <article class="product-card fade-in">
+        <img src="../gambar/produk/hikari.png" loading="lazy" alt="Produk suplemen Hikari dengan antioksidan tinggi" class="product-image" />
+        <h2>Hikari</h2>
+        <p class="product-desc">
+          Suplemen kaya antioksidan yang membantu melindungi sel dari radikal bebas, memperlambat penuaan, dan meningkatkan fungsi serta daya tahan otak dan tubuh.
+        </p>
+        <ul class="product-benefits">
+          <li>Mendukung fungsi kognitif dan memori.</li>
+          <li>Melindungi mata dari paparan sinar biru.</li>
+          <li>Meningkatkan aktivitas dan pembentukan sel saraf baru.</li>
+          <li>Meningkatkan energi dan daya tahan tubuh secara keseluruhan.</li>
+        </ul>
+      </article>
+
+      <article class="product-card fade-in">
+        <img src="../gambar/produk/sensei_suru.png" loading="lazy" alt="Serum Sensei Suru dengan teknologi nano peptide" class="product-image" />
+        <h2>Sensei Suru</h2>
+        <p class="product-desc">
+          Sensei Suru dianugerahkan Grand Gold Quality Award dari International Award Monde Selection.  
+          Regenerating Serum dengan Nano-Peptide pertama di dunia yang menggabungkan Salmon Ovary Peptide dan Salmon DNA.  
+          Memiliki kandungan bahan aktif pemenang Nobel Award 1986.
+        </p>
+        <ul class="product-benefits">
+          <li>Mendukung regenerasi dan peremajaan kulit secara mendalam.</li>
+          <li>Meningkatkan elastisitas dan kelembapan kulit.</li>
+          <li>Membantu mengurangi kerutan dan tanda penuaan.</li>
+          <li>Mempercepat penyembuhan dan perbaikan sel kulit.</li>
+          <li>Melindungi kulit dari kerusakan akibat radikal bebas.</li>
+        </ul>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Sipriana Marseli | Reseller Resmi AFC</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+
+    // Fade-in animasi untuk semua elemen dengan class .fade-in
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElems = document.querySelectorAll('.fade-in');
+
+      function checkFadeIn() {
+        fadeElems.forEach(elem => {
+          const rect = elem.getBoundingClientRect();
+          const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+          if (rect.top <= windowHeight - 100) {
+            elem.classList.add('visible');
+          }
+        });
+      }
+
+      checkFadeIn(); // saat pertama load
+      window.addEventListener('scroll', checkFadeIn); // saat scroll
+    });
+  </script>
+</body>
+</html>
